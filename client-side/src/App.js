@@ -1,11 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import UserAuth from './components/user-auth';
+import Login from './components/login';
+import Home from './components/home';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import useState from 'react';
 
 function App() {
   return (
-    <div className="Login-Form">
-    <UserAuth/> 
+    <div className="Home">
+    <Router>
+      <Routes>
+        <Route path = "/" element = {<Login/>}/>
+        <Route path = "/home" element = {<Home/>}/>
+      </Routes>
+    </Router>
   </div>
   );
 }
