@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef, useState, useEffect} from 'react';
-import './userauth.css'; // Import the CSS file
+import './styles/userauth.css'; // Import the CSS file
 import axios from "axios";
 
 export default  function UserAuth() {
@@ -16,6 +16,15 @@ export default  function UserAuth() {
       username: username,
       password: password
     })
+    const response = await fetch('http://localhost:8080/demo',{
+      method:'POST',
+      body:JSON.stringify(form),
+      headers:{
+        'Content-Type':'application/json'
+      }
+    })
+
+    const data = await response.json();
     event.preventDefault();
 
   };

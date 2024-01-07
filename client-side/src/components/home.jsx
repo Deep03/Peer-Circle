@@ -1,36 +1,30 @@
 import React from 'react';
-
+import './styles/home.css';
 function HomePage() {
-  // Mock data for connected peers (replace this with actual data from your application)
-  const connectedPeers = [
-    { id: 1, name: 'User 1' },
-    { id: 2, name: 'User 2' },
-    { id: 3, name: 'User 3' },
-  ];
 
   return (
-    <div className="container">
-      <div className="top-bar">
-        <h1>Find Peers</h1>
-        <input type="text" placeholder="Search by User ID" />
-      </div>
-
-      <div className="user-id-form">
-        <h2>Your User ID</h2>
-        <form>
-          <input type="text" value="Your User ID" readOnly />
-        </form>
-      </div>
-
-      <div className="connected-peers">
-        <h2>Connected Peers</h2>
-        <ul>
-          {connectedPeers.map((peer) => (
-            <li key={peer.id}>{peer.name}</li>
-          ))}
-        </ul>
-      </div>
+<div className="container">
+  <div className="top-bar">
+    <h1>Find Peers</h1>
+    <input type="text" 
+    placeholder="Search by User ID" 
+    required/>
+    <button type="submit" className="submit-button">Submit</button>
+  </div>
+  
+  <div className="card">
+    <h3>Upload Files</h3>
+    <div className="drop_box">
+      <header>
+        <h4>Select File here</h4>
+      </header>
+      <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+      <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style={{ display: 'none' }} />
+      <button className="btn">Choose File</button>
     </div>
+  </div>
+</div>
+
   );
 }
 
