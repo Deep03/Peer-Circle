@@ -4,6 +4,7 @@ import Peer from 'peerjs';
 
 function HomePage() {
   const [form, setForm] = useState({});
+  const [file, setFile] = useState();
   const usernameRef = useRef(null);
   const [peerId, setPeerId] = useState('');
   let [remotepeerId] = useState('');
@@ -55,6 +56,12 @@ function HomePage() {
 
   };
 
+
+  function handlefile(event) {
+    setFile(event.target.files[0]);
+    console.log(file)
+  }
+  
   return (
     <div className="container">
       <div className="top-bar">
@@ -78,8 +85,15 @@ function HomePage() {
             <h4>Select File here</h4>
           </header>
           <p>Files Supported: PDF, TEXT, DOC, DOCX</p>
-          <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style={{ display: 'none' }} />
-          <button className="btn">Choose File</button>
+          <label htmlFor="fileInput" className="btn">
+            Choose File
+          </label>
+          <input
+            type="file"
+            id="fileInput"
+            style={{ display: 'none' }}
+            onChange={handlefile}
+          />
         </div>
       </div>
     </div>
