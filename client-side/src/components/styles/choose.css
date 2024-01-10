@@ -1,0 +1,47 @@
+/* Font imports */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Global reset and font setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Button styles */
+.send-button,
+.receive-button {
+  margin-top: 20px;
+  margin-right:20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+
+.send-button {
+  background-color: #005af0;
+  color: #ffffff;
+}
+
+.receive-button {
+  background-color: #d42708;
+  color: #ffffff;
+}
+
+/* Hover effect for buttons */
+.send-button:hover {
+  background-color: #00a0ff;
+}
+
+.receive-button:hover {
+  background-color: #e03b3b;
+}

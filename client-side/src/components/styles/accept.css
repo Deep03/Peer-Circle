@@ -1,0 +1,64 @@
+/* Reset and font setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container styles */
+.file-receiving-container {
+  width: 600px;
+  max-width: 90%; /* Added max-width for responsiveness */
+  margin: 20px auto; /* Increased margin for better centering */
+  padding: 20px;
+  color: #333; /* Adjusted text color for improved readability */
+  background-color: #f9f9f9; /* Changed background color for softer tone */
+  border-radius: 8px; /* Added border-radius for a subtle rounded appearance */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+}
+
+/* File details section */
+.file-details {
+  text-align: center;
+  padding: 20px 0; /* Adjusted padding for better spacing */
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex; /* Aligned buttons in a row */
+  justify-content: center; /* Centered buttons horizontally */
+  margin-top: 20px;
+}
+
+.accept-button,
+.decline-button,
+.download-button {
+  padding: 10px 20px;
+  margin: 0 5px; /* Adjusted margin for spacing between buttons */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  color: #fff; /* Changed text color for better contrast */
+}
+
+.accept-button {
+  background-color: #001eff;
+}
+
+.decline-button {
+  background-color: #ff0000;
+}
+
+.download-button {
+  background-color: #3881ff;
+}
+
+/* Hover effect for buttons */
+.accept-button:hover,
+.decline-button:hover,
+.download-button:hover {
+  filter: brightness(150%);
+}

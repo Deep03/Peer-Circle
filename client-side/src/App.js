@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import Login from './components/login';
-import Home from './components/home';
+import Choose from './components/choose';
+import Send from './components/send';
+import Accept from './components/accept';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import useState from 'react';
+import Peer from 'peerjs'
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
     <Router>
       <Routes>
         <Route path = "/" element = {<Login/>}/>
-        <Route path = "/home" element = {<Home/>}/>
+        <Route path = "/choose" element = {<Choose/>}/>
+        <Route path = "/send" element = {<Send/>}/>
+        <Route path = "/accept" element = {<Accept/>}/>
       </Routes>
     </Router>
   </div>

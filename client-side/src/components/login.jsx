@@ -16,7 +16,7 @@ export default  function UserAuth() {
       username: username,
       password: password
     })
-    const response = await fetch('http://localhost:8080/demo',{
+    const response = await fetch('http://localhost:8080/user',{
       method:'POST',
       body:JSON.stringify(form),
       headers:{
