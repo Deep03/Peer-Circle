@@ -14,7 +14,7 @@ This web application enables users to securely send, receive, and download files
 
 - Node.js
 - React
-- MongoDB
+- MongoDB(Mongoose)
 - PeerJS (WebRTC)
 
 
