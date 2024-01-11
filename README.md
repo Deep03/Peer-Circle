@@ -30,7 +30,7 @@ This web application enables users to securely send, receive, and download files
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/file-transfer-web-app.git
+   git clone https://github.com/Deep03/Peer-Circle.git
    ```
 
 2. **Install Dependencies:**
@@ -38,20 +38,6 @@ This web application enables users to securely send, receive, and download files
    cd file-transfer-web-app
    npm install
    ```
-
-3. **MongoDB Configuration:**
-   - Set up a MongoDB database and obtain the connection string.
-   - Create a `.env` file in the root directory and add the following:
-     ```env
-     MONGODB_URI=your-mongodb-connection-string
-     ```
-
-4. **PeerJS Configuration:**
-   - [Sign up](https://peerjs.com/) for a free API key.
-   - Add your PeerJS API key to the `.env` file:
-     ```env
-     PEERJS_API_KEY=your-peerjs-api-key
-     ```
 
 ## Usage
 
@@ -74,11 +60,9 @@ This web application enables users to securely send, receive, and download files
 
 ## Contributing
 
-Feel free to contribute to the development of this project! Please follow the [contributing guidelines](CONTRIBUTING.md) to get started.
+Feel free to contribute to the development of this project!
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 ```
-
-Replace the placeholder content and URLs with your actual information and image links.
