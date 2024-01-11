@@ -14,16 +14,8 @@ This web application enables users to securely send, receive, and download files
 
 - Node.js
 - React
-- MongoDB
+- MongoDB(Mongoose)
 - PeerJS (WebRTC)
-
-## Screenshots
-
-![Screenshot 1](screenshots/app1.png)
-![Screenshot 2](screenshots/app2.png)
-![Screenshot 1](screenshots/app3.png)
-![Screenshot 2](screenshots/app4.png)
-![Screenshot 1](screenshots/app5.png)
 
 
 ## Setup
@@ -51,12 +43,15 @@ This web application enables users to securely send, receive, and download files
 
 3. **User Authentication:**
    - Create a new account or log in if you already have an account.
+   - ![Screenshot 1](screenshots/app1.png)
 
 4. **File Transfer:**
    - Use the interface to send and receive files securely.
+   - ![Screenshot 2](screenshots/app2.png)
 
 5. **Download Files:**
    - Once a file is received, you can download it directly from the web app.
+   - ![Screenshot 1](screenshots/app5.png)
 
 ## Contributing
 
