@@ -17,12 +17,11 @@ function HomePage() {
     peerInstance.current = peer;
   }, [])
 
-  const call = (remoteid) => {
+  const call = (remoteid, file) => {
     var conn = peerInstance.current.connect(remoteid);
     conn.on('open', function(){
-      console.log(remoteid);
-      console.log("SEND HI TO PEER");
-      conn.send('hi!');
+      console.log("SEND DATA TO PEER");
+      conn.send(file);
     });
   }
 
@@ -30,7 +29,7 @@ function HomePage() {
   const handleSubmit = async (event) => {
     const userid = usernameRef.current.value;
     remotepeerId = userid;
-    call(remotepeerId);
+    // call(remotepeerId);
     event.preventDefault();
 
     // code to used when upgrading to a different version
@@ -59,7 +58,7 @@ function HomePage() {
 
   function handlefile(event) {
     setFile(event.target.files[0]);
-    console.log(file)
+    call(remotepeerId, event.target.files[0]);
   }
   
   return (
