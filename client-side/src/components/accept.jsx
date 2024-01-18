@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './styles/accept.css';
 import Peer from 'peerjs';
+import { useNavigate } from 'react-router-dom';
 
 function Recieve() {
     const [peerId, setPeerId] = useState('');

@@ -1,10 +1,11 @@
 import React from 'react';
-import { useRef, useState, useEffect} from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './styles/userauth.css'; // Import the CSS file
-import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
-export default  function UserAuth() {
+export default function UserAuth() {
   const [form, setForm] = useState({});
+  const navg = useNavigate();
   const handleSubmit = async (event) => {
 
     event.preventDefault();
@@ -16,19 +17,20 @@ export default  function UserAuth() {
       username: username,
       password: password
     })
-    const response = await fetch('http://localhost:8080/user',{
-      method:'POST',
-      body:JSON.stringify(form),
-      headers:{
-        'Content-Type':'application/json'
+    const response = await fetch('http://localhost:8080/user', {
+      method: 'POST',
+      body: JSON.stringify(form),
+      headers: {
+        'Content-Type': 'application/json'
       }
     })
 
     const data = await response.json();
     event.preventDefault();
+    navg('/choose');
 
   };
-  
+
 
   return (
     <div className="container-wrapper">
@@ -62,6 +64,9 @@ export default  function UserAuth() {
           <div className="form-group">
             <button type="submit" className="submit-button">
               Login
+            </button>
+            <button type="submit" className="register-button">
+              Register
             </button>
           </div>
         </form>
